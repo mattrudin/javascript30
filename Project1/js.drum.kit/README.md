@@ -47,3 +47,39 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 [Detect the End of CSS Animations and Transitions with JavaScript](https://jonsuh.com/blog/detect-the-end-of-css-animations-and-transitions-with-javascript/)  
 [Nuances of CSS Transitionend Events](https://seesparkbox.com/foundry/css_transitionend_event)  
 [Transition end event](https://www.w3schools.com/jsref/event_transitionend.asp)  
+  
+### Handling events in React
+To register all the keydown events at the window, bind the "window.addEventListener" with the livecycle method "componentWillMount" in the App.js. 
+```javascript
+componentWillMount() {
+    window.addEventListener('keydown', this.playSound);
+  }
+```
+[Keybindings in React.js](https://medium.com/@alroth/keybindings-in-react-js-252007d3bdd9)
+
+### For-loops in React (or how to create different components)
+If components with minor changes have to be created, use the for-loop, wraped in a method. The method should return the components.
+```javascript
+class KeyList extends React.Component {
+
+  createKeys() {
+    let keysArray = [];
+    const keycodes = [65,83,68,70,71,72,74,75,76]
+    const keys = ['A','S','D','F','G','H','J','K','L'];
+    const instruments = ['clap', 'hihat', 'kick', 'openhat', 'boom', 'ride', 'snare', 'tom', 'tink'];
+    for(let i = 0; i < keycodes.length; i++) {
+        keysArray.push(<Key keycode ={keycodes[i]} keys={keys[i]} instrument={instruments[i]} />) 
+    }
+    return keysArray;
+  }
+
+  render() {
+    return(
+      <div className="keys">
+        {this.createKeys()}
+        </div>
+    )
+  }
+}
+```
+[For loops in React](https://blog.cloudboost.io/for-loops-in-react-render-no-you-didnt-6c9f4aa73778)  
