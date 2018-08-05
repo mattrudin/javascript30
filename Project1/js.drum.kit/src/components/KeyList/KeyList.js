@@ -10,7 +10,10 @@ class KeyList extends React.Component {
 		const keys = ['A','S','D','F','G','H','J','K','L'];
 		const instruments = ['clap', 'hihat', 'kick', 'openhat', 'boom', 'ride', 'snare', 'tom', 'tink'];
 		for(let i = 0; i < keycodes.length; i++) {
-				keysArray.push(<Key keycode ={keycodes[i]} keys={keys[i]} instrument={instruments[i]} />) 
+				keysArray.push(<Key keycode ={keycodes[i]} 
+									keys={keys[i]} 
+									instrument={instruments[i]} 
+									isPlaying={this.props.isPlaying} />) 
 		}
 		return keysArray;
 	}

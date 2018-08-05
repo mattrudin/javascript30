@@ -5,7 +5,11 @@ import KeyList from './components/KeyList/KeyList';
 class App extends Component {
   constructor(props) {
     super(props);
-    
+    this.state = {
+      className: 'key'
+    };
+
+    this.isPlaying = this.isPlaying.bind(this);
     this.playSound = this.playSound.bind(this);
     this.removeTransition = this.removeTransition.bind(this);
   }
@@ -14,12 +18,24 @@ class App extends Component {
     window.addEventListener('keydown', this.playSound);
   }
 
+  isPlaying() {
+    if(this.state.className === 'key') {
+      this.setState({
+      className: 'key-playing'
+    });} else {
+        this.setState({
+          className: 'key'
+        });
+      }
+  }
+
   playSound(e) {
     const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
     const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
     if(!audio) return;
     audio.currentTime = 0;
     audio.play();
+    //this.isPlaying();
     key.classList.add('playing');
     const keys = document.querySelectorAll('.key');
     keys.forEach(key => key.addEventListener('transitionend', this.removeTransition));  
@@ -28,13 +44,14 @@ class App extends Component {
   removeTransition(e) {
     if(e.propertyName !== 'transform') return;
     this.classList.remove('playing');
+    //this.isPlaying();
   }
 
   render() {
     return (
       <div className="App">
         
-        <KeyList />
+        <KeyList isPlaying={this.state.isPlaying} />
 
         <audio data-key="65" src="sounds/clap.wav"></audio>
         <audio data-key="83" src="sounds/hihat.wav"></audio>
