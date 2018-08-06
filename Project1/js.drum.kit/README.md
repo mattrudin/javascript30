@@ -83,3 +83,21 @@ class KeyList extends React.Component {
 }
 ```
 [For loops in React](https://blog.cloudboost.io/for-loops-in-react-render-no-you-didnt-6c9f4aa73778)  
+
+### Lifecycle methods in React
+Interaction with the DOM has to be trough lifecycle methods. Even if its just an document.getElementById() method, lifecycle has to be used. The whole lifecycle consists of three intervalls with a bunch of methods:  
+* Mounting
+  * constructor()
+  * componentWillMount()
+  * render()
+  * componentDidMount()
+* Updating
+  * componentWillReceiveProps()
+  * shouldComponentUpdate()
+  * componentWillUpdate()
+  * render()
+  * componentDidUpdate()
+* Unmounting
+  * componentWillUnmount()
+More information under the following link:  
+[React Components Lifecycle](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
