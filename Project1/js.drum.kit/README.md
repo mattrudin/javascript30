@@ -98,6 +98,7 @@ Interaction with the DOM has to be trough lifecycle methods. Even if its just an
   * render()
   * componentDidUpdate()
 * Unmounting
-  * componentWillUnmount()
+  * componentWillUnmount()  
+  
 More information under the following link:  
 [React Components Lifecycle](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
