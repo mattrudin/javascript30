@@ -1,7 +1,7 @@
 # CSS and JS Clock
 JavaScript30, Project 2
 
-Tags: *Javascript*, *CSS*, *Rect*
+Tags: *Javascript*, *CSS*, *React*
 
 
 ## Index
