@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TrackList.css';
 import Track from '../Track/Track';
 
@@ -19,6 +20,12 @@ const TrackList = (props) => {
 			{trackItems}
 		</div>
 	);
+};
+
+TrackList.propTypes = {
+  dataKey: PropTypes.array.isRequired,
+  letter: PropTypes.array.isRequired,
+  sound: PropTypes.array.isRequired
 };
 
 export default TrackList;

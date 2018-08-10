@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Track.css';
 
 // Component is stateless, therefore no class needed
@@ -14,6 +15,12 @@ const Track = (props) => {
 		  <span className="sound">{sound}</span>
 		</div>
 	);
+};
+
+Track.propTypes = {
+  dataKey: PropTypes.number.isRequired,
+  letter: PropTypes.string.isRequired,
+  sound: PropTypes.string.isRequired
 };
 
 export default Track;
