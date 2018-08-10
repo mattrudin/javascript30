@@ -9,11 +9,13 @@ const TrackList = (props) => {
 	const dataKey = props.dataKey;
 	const letter = props.letter;
 	const sound = props.sound;
+	const isPlaying = props.isPlaying;
 	const trackItems = dataKey.map((number, index) => {
 		return <Track 	key={number}
 						dataKey={number}
 						letter={letter[index]}
-						sound={sound[index]} />
+						sound={sound[index]}
+						isPlaying={isPlaying} />
 	})
 	return (
 		<div className="keys">
