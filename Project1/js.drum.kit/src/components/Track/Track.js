@@ -4,10 +4,14 @@ import './Track.css';
 // Component is stateless, therefore no class needed
 
 const Track = (props) => {
+	const dataKey = props.dataKey;
+	const letter = props.letter;
+	const sound = props.sound;
 	return (
-		<div data-key="65" class="key">
-		  <kbd>A</kbd>
-		  <span class="sound">clap</span>
+		<div 	data-key={dataKey.toString()} 
+				className="key">
+		  <kbd>{letter}</kbd>
+		  <span className="sound">{sound}</span>
 		</div>
 	);
 };
