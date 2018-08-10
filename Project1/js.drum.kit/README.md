@@ -102,3 +102,9 @@ Interaction with the DOM has to be trough lifecycle methods. Even if its just an
   
 More information under the following link:  
 [React Components Lifecycle](https://medium.com/mofed/reacts-component-lifecycles-adf0ebc89d23)
+
+### PropTypes
+*Quality Assurance*
+PropTypes is since React v15.5 an independent library. Therefore it has to be installed and imported seperately. 
+[NPM PropTypes library](https://www.npmjs.com/package/prop-types)  
+[Validating Props easily with React PropTypes](https://codeburst.io/validating-props-easily-with-react-proptypes-96e80208207)
