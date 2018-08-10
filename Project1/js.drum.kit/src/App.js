@@ -9,7 +9,8 @@ class App extends React.Component{
       dataKey: [65, 83, 68, 70, 71, 72, 74, 75, 76],
       letter: ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
       sound: ['clap', 'hihat', 'kick', 'openhat', 'boom', 'ride', 'snare', 'tom', 'tink'],
-      isPlaying: false
+      isPlaying: false,
+      keyCode: ''
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
@@ -21,9 +22,10 @@ class App extends React.Component{
 
   handleKeyDown(e) {
     this.setState({
-      isPlaying: true
+      isPlaying: true,
+      keyCode: e.keyCode
     });
-    setTimeout(this.handleToggle, 1000);
+    setTimeout(this.handleToggle, 70);
   }
 
   handleToggle() {
@@ -37,7 +39,8 @@ class App extends React.Component{
       <TrackList  dataKey={this.state.dataKey} 
                   letter={this.state.letter} 
                   sound={this.state.sound}
-                  isPlaying={this.state.isPlaying} />
+                  isPlaying={this.state.isPlaying}
+                  keyCode={this.state.keyCode} />
     );
   }
 }

@@ -9,9 +9,10 @@ const Track = (props) => {
 	const letter = props.letter;
 	const sound = props.sound;
 	const isPlaying = props.isPlaying;
+	const keyCode = props.keyCode;
 	return (
 		<div 	data-key={dataKey.toString()} 
-				className={isPlaying ? ' key playing' : 'key'}>
+				className={isPlaying && keyCode === dataKey ? ' key playing' : 'key'}>
 		  <kbd>{letter}</kbd>
 		  <span className="sound">{sound}</span>
 		</div>
