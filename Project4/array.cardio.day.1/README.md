@@ -23,3 +23,6 @@ Tags: *Javascript*, *Functional programming*
 ### Array.prototype.sort()
 [Sorting an array by multiple criteria with vanilla JavaScript](https://gomakethings.com/sorting-an-array-by-multiple-criteria-with-vanilla-javascript/)  
 [These JavaScript methods will boost your skills in just a few minutes](https://medium.freecodecamp.org/7-javascript-methods-that-will-boost-your-skills-in-less-than-8-minutes-4cc4c3dca03f)  
+
+### ES6 spread operator
+[Understanding the Spread Operator in JavaScript](https://zendev.com/2018/05/09/understanding-spread-operator-in-javascript.html)  
