@@ -1,4 +1,5 @@
 import React from 'react';
+import Sound from 'react-sound';
 import './App.css';
 import TrackList from './components/TrackList/TrackList';
 
@@ -36,11 +37,16 @@ class App extends React.Component{
 
   render() {
     return(
+      <div>
       <TrackList  dataKey={this.state.dataKey} 
                   letter={this.state.letter} 
                   sound={this.state.sound}
                   isPlaying={this.state.isPlaying}
                   keyCode={this.state.keyCode} />
+      <Sound
+                  url="./templates/sounds/boom.wav"
+                  playStatus={Sound.status.PLAYING} />
+      </div>
     );
   }
 }
