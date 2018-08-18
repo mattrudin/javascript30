@@ -55,3 +55,9 @@ export default ${1:TITLE};
 </snippet>
 ```
 [A Guide to Sublime Text Snippets](https://medium.freecodecamp.org/a-guide-to-preserving-your-wrists-with-sublime-text-snippets-7541662a53f2)
+
+### Template literals in CSS className
+```javascript
+className={`${index} ${open ? 'open' : ''} ${openActive ? 'open-active' : ''}`}
+```
+'open' and 'openActive' will be toggled by an eventHandler.
