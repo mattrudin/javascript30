@@ -61,3 +61,16 @@ export default ${1:TITLE};
 className={`${index} ${open ? 'open' : ''} ${openActive ? 'open-active' : ''}`}
 ```
 'open' and 'openActive' will be toggled by an eventHandler.
+
+### Styling react components
+Use "style=" to style a react component. Eg:
+```javascript
+const style = {
+	color: "white",
+	fontSize: "13px"
+}
+
+<h1 style={style}>Style me!!</h1>
+```
+[The best “styling in React” tutorial you’ve ever seen](https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945)  
+Section "Creating a style object variable"

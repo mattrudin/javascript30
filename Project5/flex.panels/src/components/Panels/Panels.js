@@ -9,12 +9,14 @@ const Panels = (props) => {
 	const openActive = props.openActive;
 	return(
 		<div className="panels">
-			{panelNames.map((index, num) => <Panel 	onClick={props.onClick}
-													className={`${index} ${open ? 'open' : ''} ${openActive ? 'open-active' : ''}`}
+			{panelNames.map((index, num) => <Panel 	click={props.click}
+													className={`${index} 
+																${open ? 'open' : ''} 
+																${openActive ? 'open-active' : ''}`}
 													key={num} 
+													keyNumber={num}
 													panelText={panelText[num]}
 													 />)}
-			<button onClick={props.onClick} >Click me</button>
 	    </div>
 	);
 };
