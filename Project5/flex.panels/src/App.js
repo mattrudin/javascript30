@@ -7,14 +7,19 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			panelNames: [`panel panel1`,`panel panel2`,`panel panel3`,`panel panel4`,`panel panel5`],
-			panelText: [[`Hey`, `Let's`, `Dance`], [`Give`,`Take`,`Receive`], [`Experience`,`It`,`Today`], [`Give`,`All`,`You can`], [`Life`,`In`,`Motion`]]
+			panelText: [[`Hey`, `Let's`, `Dance`], [`Give`,`Take`,`Receive`], [`Experience`,`It`,`Today`], [`Give`,`All`,`You can`], [`Life`,`In`,`Motion`]],
+			open: false,
+			openActive: false
 		};
 
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick() {
-		console.log('hello');
+		this.setState(prevState => ({
+			open: 		!prevState.open,
+			openActive: !prevState.openActive
+		}));
 	}
 
 	render() {
@@ -22,7 +27,9 @@ class App extends React.Component {
 			<div className="App">
 				<Panels onClick={this.handleClick}
 						panelNames={this.state.panelNames} 
-						panelText={this.state.panelText} />
+						panelText={this.state.panelText}
+						open={this.state.open}
+						openActive={this.state.openActive} />
 			</div>
 		);
   	}
