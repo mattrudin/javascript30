@@ -15,17 +15,18 @@ class App extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick() {
+	handleClick(event) {
 		this.setState(prevState => ({
 			open: 		!prevState.open,
 			openActive: !prevState.openActive
 		}));
+		console.log(event.currentTarget);
 	}
 
 	render() {
 		return (
 			<div className="App">
-				<Panels onClick={this.handleClick}
+				<Panels click={this.handleClick}
 						panelNames={this.state.panelNames} 
 						panelText={this.state.panelText}
 						open={this.state.open}
