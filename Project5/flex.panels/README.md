@@ -18,4 +18,4 @@ Tags: *Javascript*, *CSS Flexbos*
 
 ## 2. Lessons learned
 ### Flexbox tutorial
-[Free Flelxbox tutorial by Wes Bos](www.flexbox.io) 
+[Free Flexbox tutorial by Wes Bos](www.flexbox.io) 
