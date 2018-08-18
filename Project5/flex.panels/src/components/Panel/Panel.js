@@ -6,7 +6,7 @@ const Panel = (props) => {
 	const panelText = props.panelText
 	return(
 		<div className={className}>
-	      {panelText.map(text => <p>{text}</p>)}
+	      {panelText.map((text, num) => <p key={num} >{text}</p>)}
 	    </div>
 	);
 };
