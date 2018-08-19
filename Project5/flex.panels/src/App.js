@@ -17,8 +17,24 @@ class App extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick(event) {
-		console.log(event);
+	handleClick(event, id) {
+		const panelIndex = this.state.panels.findIndex(panel => {
+			return panel.id === id;
+		}); //find the index with the id
+
+		const panel = {
+			...this.state.panels[panelIndex]
+		}; //make a copy of the single panel
+
+		const openBool = panel.open; //make a copy of the boolean
+		const openActiveBool = panel.openActive; //make a copy of the boolean
+		panel.open = !openBool; //change the boolean to the oposite
+		panel.openActive = !openActiveBool; //change the boolean to the oposite
+
+		const panels = [...this.state.panels]; //make a copy of all panels
+		panels[panelIndex] = panel //replace the old panel with the new one
+
+		this.setState( {panels: panels} ) //set the state to the new panels
 	}
 
 	render() {
