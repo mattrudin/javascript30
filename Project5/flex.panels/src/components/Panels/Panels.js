@@ -11,8 +11,8 @@ const Panels = (props) => {
 		<div className="panels">
 			{panelNames.map((index, num) => <Panel 	click={props.click}
 													className={`${index} 
-																${open ? 'open' : ''} 
-																${openActive ? 'open-active' : ''}`}
+																${open ? 'open' : null} 
+																${openActive ? 'open-active' : null}`}
 													key={num} 
 													keyNumber={num}
 													panelText={panelText[num]}
