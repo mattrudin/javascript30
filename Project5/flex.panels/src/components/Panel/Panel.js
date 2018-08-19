@@ -1,15 +1,12 @@
 import React from 'react';
 import './Panel.css';
 
-const Panel = (props) => {
-	const className = props.className; 
+const Panel = (props) => { 
 	const panelText = props.panelText;
-	const keyNumber = props.keyNumber;
+	const className = props.className;
 	return(
 		<div className={className}>
-		  {panelText.map((text, num) => <p 	className={keyNumber}
-		  									key={num} 
-		  									onClick={props.click}>{text}</p>)}
+		  {panelText.map((text, index) => <p>{text}</p>)}
 		</div>
 	);
 };

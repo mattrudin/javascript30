@@ -3,20 +3,14 @@ import './Panels.css';
 import Panel from '../Panel/Panel';
 
 const Panels = (props) => {
-	const panelNames = props.panelNames;
-	const panelText = props.panelText;
-	const open = props.open;
-	const openActive = props.openActive;
+	const panelInfo = props.panelInfo;
 	return(
 		<div className="panels">
-			{panelNames.map((index, num) => <Panel 	click={props.click}
-													className={`${index} 
-																${open ? 'open' : null} 
-																${openActive ? 'open-active' : null}`}
-													key={num} 
-													keyNumber={num}
-													panelText={panelText[num]}
-													 />)}
+			{panelInfo.map((panel) => <Panel 	onClick={props.handleClick}
+												className={`${panel.panelName} ${panel.open ? 'open' : ''} ${panel.openActive ? 'open-active' : ''}`}
+												key={panel.id} 
+												panelText={panel.panelText}
+												 />)}
 	    </div>
 	);
 };

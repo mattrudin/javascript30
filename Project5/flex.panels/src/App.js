@@ -5,32 +5,27 @@ import Panels from './components/Panels/Panels';
 class App extends React.Component {
   	constructor(props) {
 		super(props);
-		this.state = {
-			panelNames: [`panel panel1`,`panel panel2`,`panel panel3`,`panel panel4`,`panel panel5`],
-			panelText: [[`Hey`, `Let's`, `Dance`], [`Give`,`Take`,`Receive`], [`Experience`,`It`,`Today`], [`Give`,`All`,`You can`], [`Life`,`In`,`Motion`]],
-			open: false,
-			openActive: false
+		this.state = { panels: [
+			{ id: 'aldjf', panelName: 'panel panel1', panelText: [`Hey`,`Let's`,`Dance`], 		open: false, openActive: false},
+			{ id: 'jlkjl', panelName: 'panel panel2', panelText: [`Give`,`Take`,`Receive`], 	open: false, openActive: false},
+			{ id: 'ipoip', panelName: 'panel panel3', panelText: [`Experience`,`It`,`Today`], 	open: false, openActive: false},
+			{ id: 'qweqe', panelName: 'panel panel4', panelText: [`Give`,`All`,`You can`], 		open: false, openActive: false},
+			{ id: 'erter', panelName: 'panel panel5', panelText: [`Life`,`In`,`Motion`], 		open: false, openActive: false}
+			]
 		};
 
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick(event) {
-		this.setState(prevState => ({
-			open: 		!prevState.open,
-			openActive: !prevState.openActive
-		}));
-		console.log(event.currentTarget);
+		console.log(event);
 	}
 
 	render() {
 		return (
 			<div className="App">
-				<Panels click={this.handleClick}
-						panelNames={this.state.panelNames} 
-						panelText={this.state.panelText}
-						open={this.state.open}
-						openActive={this.state.openActive} />
+				<Panels handleClick={this.handleClick}
+						panelInfo={this.state.panels} />
 			</div>
 		);
   	}
