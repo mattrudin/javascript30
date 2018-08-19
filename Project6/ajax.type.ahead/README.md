@@ -24,3 +24,6 @@ Tags: *Javascript*, *AJAX*, *Promises*
 [An Introduction to Regular Expressions (Regex) In JavaScript](https://codeburst.io/an-introduction-to-regular-expressions-regex-in-javascript-1d3559e7ac9a)  
 [JavaScript: Learn Regular Expressions for Beginners](https://codeburst.io/javascript-learn-regular-expressions-for-beginners-bb6107015d91)  
 [JavaScript Regex Cheatsheet](https://www.debuggex.com/cheatsheet/regex/javascript)  
+
+### React Forms
+[ReactJS documentation about forms](https://reactjs.org/docs/forms.html)
