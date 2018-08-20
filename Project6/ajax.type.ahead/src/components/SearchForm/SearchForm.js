@@ -1,14 +1,20 @@
 import React from 'react';
 import './SearchForm.css';
-import SearchInput from './components/SearchInput/SearchInput';
-import Suggestions from './components/Suggestions/Suggestions';
+import SearchInput from '../SearchInput/SearchInput';
+import Suggestions from '../Suggestions/Suggestions';
 
 const SearchForm = (props) => {
+	const value = props.value;
+	const handleChange = props.handleChange;
+	const html = props.html;
 	return(
 		<div className="SearchForm">
-	        <form class="search-form">
-			    <SearchInput />
-			    <Suggestions />
+	        <form className="search-form">
+			    <SearchInput 
+			    	value={value}
+			    	onChange={handleChange} />
+			    <Suggestions
+			    	html={html} />
 			</form>
 	    </div>
 	);
