@@ -6,7 +6,7 @@ import Suggestions from '../Suggestions/Suggestions';
 const SearchForm = (props) => {
 	const value = props.value;
 	const handleChange = props.handleChange;
-	const html = props.html;
+	const match = props.match;
 	return(
 		<div className="SearchForm">
 	        <form className="search-form">
@@ -14,7 +14,7 @@ const SearchForm = (props) => {
 			    	value={value}
 			    	onChange={handleChange} />
 			    <Suggestions
-			    	html={html} />
+			    	match={match} />
 			</form>
 	    </div>
 	);

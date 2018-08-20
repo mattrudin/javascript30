@@ -7,7 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      match: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -16,8 +17,7 @@ class App extends Component {
 
   handleChange(event) {
     this.setState({
-      value: event.target.value,
-      html: ''
+      value: event.target.value
     });
   }
 
@@ -34,21 +34,8 @@ class App extends Component {
 
   displayMatches() {
     const matchArray = this.findMatches(this.state.value, Cities);
-    const html = matchArray.map(place => {
-      const regex = new RegExp(this.state.value, 'gi');
-      const cityName = place.city.replace(regex, 
-        `<span class="hl">${this.state.value}</span>`);
-      const stateName = place.state.replace(regex, 
-        `<span class="hl">${this.state.value}</span>`);
-      return `
-        <li>
-          <span class="name">${cityName}, ${stateName}</span>
-          <span class="population">${this.numberWithCommas(place.population)}</span>
-        </li>
-        `;
-    }).join('');
     this.setState({
-      html: html
+      match: matchArray
     });
   }
 
@@ -58,7 +45,7 @@ class App extends Component {
         <SearchForm 
           value={this.state.value} 
           onChange={this.handleChange}
-          html={this.state.html} />
+          match={this.state.match} />
       </div>
     );
   }
