@@ -3,7 +3,10 @@ import './SearchInput.css';
 
 const SearchInput = (props) => {
 	return(
-		<input type="text" className="search" onChange={props.input} />
+		<input 
+			type="text" 
+			className="search" 
+			onChange={props.input} />
 	);
 };
 
