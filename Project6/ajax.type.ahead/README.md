@@ -27,3 +27,6 @@ Tags: *Javascript*, *AJAX*, *Promises*
 
 ### React Forms
 [ReactJS documentation about forms](https://reactjs.org/docs/forms.html)
+
+### Inputs in ReactJS
+[How to Work with Forms, Inputs and Events in React](https://medium.com/capital-one-developers/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b)  
