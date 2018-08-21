@@ -50,7 +50,8 @@ class App extends Component {
           input={this.handleInput}  />
         <Suggestions 
           matchArray={this.state.matchArray}
-          searchInput={this.state.searchInput} />
+          searchInput={this.state.searchInput}
+          numberWithCommas={this.numberWithCommas} />
       </form>
     );
   }
