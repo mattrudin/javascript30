@@ -17,4 +17,5 @@ Tags: *Javascript*, *<canvas />*, *HTML5*
 
 
 ## 2. Lessons learned
-### 
+### HTML5 Canvas
+[Basics @W3Schools](https://www.w3schools.com/html/html5_canvas.asp)  
